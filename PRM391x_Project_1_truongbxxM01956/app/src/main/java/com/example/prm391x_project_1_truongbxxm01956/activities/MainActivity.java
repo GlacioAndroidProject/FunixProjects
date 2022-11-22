@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
             "frog","jelly fish","kbugbuster","lion","nessy",
             "penguin","pig","staroffice","turtle","xfiles monster",
     };
-    private String[] description ={
+    private int[] description ={
             //"animal",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
+            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
+            R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
+            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
+            R.string.penguin,R.string.pig,R.string.staroffice,R.string.turtle,R.string.xfiles_monster,
+            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
+            R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
+            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
+            R.string.penguin,R.string.pig,R.string.staroffice, R.string.turtle,R.string.xfiles_monster
     };
     private int[] photos={//R.drawable.bg_animal,
             R.drawable.ant,R.drawable.big_foot,R.drawable.bird,R.drawable.cat,R.drawable.dog,
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     // getting all the datas
     private void getDatas(){
         for(int count=0;count<names.length;count++){
-            users.add(new Aniamls(names[count], description[count],photos[count], false));
+            users.add(new Aniamls(names[count], getString(description[count]),photos[count], false));
         }
     }
 }
