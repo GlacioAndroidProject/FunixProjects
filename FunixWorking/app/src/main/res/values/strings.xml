@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FunixWorking</string>
+    <string name="txt_rabbit">rabbit</string>
+    <string name="txt_cat">Cat</string>
+    <string name="txt_desc">Desc</string>
+    <string name="txt_scale">Scale</string>
+    <string name="txt_trans">Trans</string>
+    <string name="txt_rotate">Rotate</string>
+    <string name="txt_alpha">Alpha</string>
+    <string name="txt_loading">Loading</string>
+    <string name="txt_name">Ali Connors</string>
+    <string name="txt_phone1">(650) 555-1234</string>
+    <string name="txt_title_mobile">Mobile</string>
+    <string name="txt_phone2">(323) 555-6789</string>
+    <string name="txt_email">aliconnors@example.com</string>
+    <string name="txt_login">Login</string>
+
+    <string name="hint_email">Email</string>
+
+    <string name="hint_password">Password</string>
+
+    <string name="txt_forgot_pass">Forgot password?</string>
+
+    <string name="txt_no_account">Don\'t have an account?</string>
+
+    <string name="txt_register">Register</string>
+
+    <string name="txt_mess">Essentials</string>
+    <string name="txt_flight">While Traveling</string>
+    <string name="txt_hospital">Help / Medical</string>
+    <string name="txt_hotel">At the hotel</string>
+    <string name="txt_restaurant">At the Restaurant</string>
+    <string name="txt_coctail">At the Bar</string>
+    <string name="txt_store">At the Store</string>
+    <string name="txt_work">Work</string>
+    <string name="txt_time">Time</string>
+    <string name="txt_education">Education</string>
+    <string name="txt_movie">Entertainment</string>
+</resources>
