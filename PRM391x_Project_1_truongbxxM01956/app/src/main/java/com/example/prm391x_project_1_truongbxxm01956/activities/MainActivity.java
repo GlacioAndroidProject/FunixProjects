@@ -1,8 +1,15 @@
 package com.example.prm391x_project_1_truongbxxm01956.activities;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.GridView;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -10,6 +17,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.prm391x_project_1_truongbxxm01956.R;
 import com.example.prm391x_project_1_truongbxxm01956.adapters.GrilViewAdapter;
 import com.example.prm391x_project_1_truongbxxm01956.models.Aniamls;
+import com.example.prm391x_project_1_truongbxxm01956.utils.Functions;
 
 import java.util.ArrayList;
 
@@ -60,7 +68,19 @@ public class MainActivity extends AppCompatActivity {
         gallery=(GridView)findViewById(R.id.gallery);
         grilViewAdapter =new GrilViewAdapter(users,this);
         gallery.setAdapter(grilViewAdapter);
+        // in the mime type you'd like to allow the user to select
         getDatas();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateDatas();
     }
 
     // getting all the datas
@@ -68,5 +88,13 @@ public class MainActivity extends AppCompatActivity {
         for(int count=0;count<names.length;count++){
             users.add(new Aniamls(names[count], getString(description[count]),photos[count], false));
         }
+    }
+    private void updateDatas(){
+        for(int count=0;count<users.size();count++){
+            boolean isFavorite = Functions.getsetSharedPreferences(((Activity)this),users.get(count).getName());
+            users.get(count).setFavorite(isFavorite);
+        }
+        grilViewAdapter =new GrilViewAdapter(users,this);
+        gallery.setAdapter(grilViewAdapter);
     }
 }
