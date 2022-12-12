@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_seas">
+
+    <fragment
+        android:id="@+id/nav_seas"
+        android:name="com.example.prm391x_project_2_truongbxxm01956.ui.Manimals.ManimalsFragment"
+        android:label="@string/menu_seas"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_manimals"
+        android:name="com.example.prm391x_project_2_truongbxxm01956.ui.seas.SeasFragment"
+        android:label="@string/menu_manimals"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_birds"
+        android:name="com.example.prm391x_project_2_truongbxxm01956.ui.birds.BirdsFragment"
+        android:label="@string/menu_birds"
+        tools:layout="@layout/fragment_home" />
+</navigation>

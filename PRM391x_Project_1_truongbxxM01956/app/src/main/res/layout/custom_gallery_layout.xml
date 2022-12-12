@@ -38,11 +38,8 @@
                 android:layout_margin="10dp"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                />
+                android:contentDescription="TODO" />
         </FrameLayout>
-
-
-
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>

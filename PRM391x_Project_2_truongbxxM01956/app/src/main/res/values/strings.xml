@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PRM391x_Project_2_truongbxxM01956</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_seas">Seas</string>
+    <string name="menu_manimals">Manimals</string>
+    <string name="menu_birds">Birds</string>
+
+    <string name="name_text">Enter name...</string>
+    <string name="profession_text">Enter profession</string>
+    <string name="ant">Kiến là một họ côn trùng thuộc bộ Cánh màng. Các loài trong họ này có tính xã hội cao, có khả năng sống thành tập đoàn lớn có tới hàng triệu con. Nhiều tập đoàn kiến còn có thể lan tràn trên một khu vực đất rất rộng, hình thành nên các siêu tập đoàn</string>
+    <string name="big_foot">Bigfoot, chân to hay Sasquatch, là tên được đặt cho một loại sinh vật giống như khỉ mà một số người tin rằng sống ở rừng, chủ yếu ở Tây Bắc Thái Bình Dương của khu vực Bắc Mỹ</string>
+    <string name="bird">Chim là tập hợp các loài động vật có xương sống, máu nóng, đi đứng bằng hai chân, có mỏ, đẻ trứng, có cánh, có lông vũ và biết bay. Trong lớp Chim, có hơn 10.000 loài còn tồn tại, giúp chúng trở thành lớp đa dạng nhất trong các loài động vật bốn chi.</string>
+    <string name="cat">Mèo là động vật có vú, nhỏ nhắn và chuyên ăn thịt, sống chung với loài người, được nuôi để săn vật gây hại hoặc làm thú nuôi cùng với chó nhà. Mèo nhà đã sống gần gũi với loài người ít nhất 9.500 năm, và hiện nay chúng là con vật cưng phổ biến nhất trên thế giới.</string>
+    <string name="dog">Chó, là một loài động vật thuộc chi Chó, tạo nên một phần tiến hóa của sói, đồng thời là loài động vật ăn thịt trên cạn có số lượng lớn nhất</string>
+    <string name="dolphin">Cá heo là động vật có vú sống ở đại dương và sông nước có quan hệ mật thiết với cá voi. Có gần 40 loài cá heo thuộc 17 chi sinh sống ở các đại dương, số ít còn lại sinh sống tại một số con sông trên thế giới. Kích thước của cá heo có thể từ 1,2 m và 40 kg, cho tới 9,5 m và 10 tấn.</string>
+    <string name="dragon_fly">Chuồn chuồn ngô hay chuồn chuồn chúa là tên gọi phổ thông cho các loài côn trùng thuộc phân bộ Epiprocta, hay theo nghĩa hẹp thuộc cận bộ Anisoptera. Các loài này đặc trưng bởi cặp mắt kép lớn, hai cặp cánh trong suốt, và thân bụng dài.</string>
+    <string name="elephant">Voi là loài động
+        vật đất lớn nhất hiện có. Ba loài sống hiện đang được công nhận: voi rừng châu Phi, voi rừng châu Phi và voi châu Á. Chúng là những thành viên duy nhất còn sống sót của họ Elephantidae và bộ Proboscidea.</string>
+    <string name="frog">Cóc trong tiếng Việt khi đề cập tới một nhóm động vật thuộc bộ Ếch nhái hay bộ Không đuôi (Anura) thì nói chung là các động vật có lớp da sần sùi, khi trưởng thành chủ yếu sống trên cạn. Tuy nhiên, nó không là sự phân loại khoa học chính xác do cóc có thể là tên gọi chung cho các loài trong các họ khác nhau</string>
+    <string name="elly_fish">Được dịch từ tiếng Anh-Sứa và thạch biển là tên gọi chung không chính thức được đặt cho pha medusa của một số thành viên sền sệt của loài Medusozoa phụ, một bộ phận chính của ngành Cnidaria.</string>
+    <string name="kbugbuster">Enter profession</string>
+    <string name="lion">Sư tử, là một trong những đại miêu trong họ Mèo và là một loài của chi Báo. Được xếp mức sắp nguy cấp trong thang sách Đỏ IUCN từ năm 1996, các quần thể loài này ở châu Phi đã bị sụt giảm khoảng 43% từ những năm đầu thập niên 1990.</string>
+    <string name="nessy">Rắn là tên gọi chung để chỉ một nhóm các loài động vật bò sát ăn thịt, từng có chân và thân hình tròn dài (hình trụ), thuộc phân bộ Serpentes, có thể phân biệt với các loài thằn lằn không chân bằng các đặc trưng như không có mí mắt và tai ngoài. Giống như các loài bò sát có vảy (Squamata) khác, rắn là động vật có xương sống, có màng ối, ngoại nhiệt với các lớp vảy xếp chồng lên nhau che phủ cơ thể.</string>
+    <string name="penguin">Chim cánh cụt hay còn gọi là chim cụt cánh là một nhóm chim nước không bay được. Chúng hầu như chỉ sống ở Nam bán cầu, với duy nhất một loài, chim cánh cụt Galápagos, được tìm thấy ở phía bắc đường xích đạo.</string>
+    <string name="pig">Lợn nhà hay heo nhà là một giống loài được thuần hóa từ loài lợn rừng, được chăn nuôi để cung cấp thịt. Hầu hết lợn nhà có lớp lông mỏng trên bề mặt da. Lợn nhà thường được cho rằng là một phân loài từ tổ tiên hoang dã của chúng là lợn rừng, trong trường hợp này chúng được đặt tên sinh học là Sus scrofa domesticus.</string>
+    <string name="staroffice">Bướm ngày là các loài côn trùng nhỏ, biết bay, hoạt động vào ban ngày thuộc bộ Cánh vẩy (Lepidoptera), có nhiều loại, ít màu cũng có mà sặc sỡ nhiều màu sắc cũng có. Thường chúng sống gần các bụi cây nhiều hoa để hút phấn hoa, mật hoa, góp phần trong việc giúp hoa thụ phấn. Bướm ngày nhiều khi gọi tắt là bướm hay bươm bướm, mặc dù bướm có thể chỉ đến bướm đêm (ngai ngài).</string>
+    <string name="turtle">Bộ Rùa là những loài bò sát thuộc nhóm chỏm cây của siêu bộ Chelonia. Trong tiếng Việt, các loài thuộc bộ rùa được gọi bằng nhiều tên khác nhau như rùa, ba ba, giải, vích, đồi mồi... Trong văn hóa, rùa được nhìn nhận dưới nhiều gốc độ khác nhau tùy theo nền văn hóa</string>
+    <string name="xfiles_monster">Dơi là động vật có vú duy nhất có thể bay được. Một số loài thú khác như chồn bay, sóc bay... trông có vẻ như có thể bay nhưng thực ra chúng chỉ có thể lượn - trong một khoảng cách có giới hạn. Khoảng 70% số loài dơi ăn sâu bọ, số còn lại chủ yếu ăn hoa quả và chỉ có vài loài ăn thịt.</string>
+    <string name="fish">Cá là những động vật có dây sống, phần lớn là ngoại nhiệt (máu lạnh), có mang (một số có phổi) và sống dưới nước. Hiện người ta biết khoảng trên 31.900 loài cá[1], điều này làm cho chúng trở thành nhóm đa dạng nhất trong số các động vật có dây sống. Sự biến nhiệt cho phép thân nhiệt của chúng biến đổi theo sự thay đổi nhiệt độ của môi trường, mặc dù một số loài cá lớn có hoạt động bơi lội tích cực như cá mập trắng lớn và cá ngừ có thể duy trì một nhiệt độ cơ thể cao hơn</string>
+
+</resources>

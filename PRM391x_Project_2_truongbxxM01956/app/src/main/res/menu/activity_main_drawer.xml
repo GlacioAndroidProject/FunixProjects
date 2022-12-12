@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single"
+        android:visible="true"
+        >
+        <item
+            android:id="@+id/nav_avata"
+            android:icon="@drawable/bg_animal"
+            android:title=""
+            />
+
+        <item
+            android:id="@+id/nav_seas"
+            android:icon="@drawable/bg_sea"
+            android:title="@string/menu_seas" />
+        <item
+
+            android:id="@+id/nav_manimals"
+            android:icon="@drawable/bg_mammal"
+            android:title="@string/menu_manimals" />
+        <item
+            android:id="@+id/nav_birds"
+            android:icon="@drawable/bg_bird"
+            android:title="@string/menu_birds"
+            />
+    </group>
+</menu>
