@@ -67,9 +67,9 @@ public class ManimalsFragment extends Fragment {
 
         users=new ArrayList<>();
         gallery=binding.gallery;
+        getDatas();
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
-        getDatas();
 /*
 
         final TextView textView = binding.textHome;

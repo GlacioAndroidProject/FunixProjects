@@ -63,3 +63,45 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
+
+/*
+import android.os.Bundle;
+
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+import com.example.prm391x_project_2_truongbxxm01956.ui.Animal;
+import com.example.prm391x_project_2_truongbxxm01956.ui.common.AnimalDetail;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        initViews();
+
+    }
+    private void initViews() {
+
+        MenuFragment menuFragment = new MenuFragment();
+
+        getSupportFragmentManager().beginTransaction()
+
+                .replace(R.id.ln_main, menuFragment, null).commit();
+
+    }
+    public void showDetail(List<AnimalDetail> listAnimals, AnimalDetail animal) {
+
+        //Học sinh tự xây dựng màn hình DetailFragment dựa vào 2 dữ liệu đầu vào của phương thức
+
+    }
+
+}*/

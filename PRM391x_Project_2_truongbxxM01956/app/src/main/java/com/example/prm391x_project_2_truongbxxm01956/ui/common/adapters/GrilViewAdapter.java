@@ -52,11 +52,11 @@ public class GrilViewAdapter extends BaseAdapter{
         if(view==null){
             photo=new ImageView(context);
         }
-        photo=(ImageView)view.findViewById(R.id.photo);
-        favorite =(ImageView)view.findViewById(R.id.favorite);
-        Aniamls user=users.get(i);
-        setImagePhoto(favorite, user.isFavorite());
-
+        photo = (ImageView)view.findViewById(R.id.photo);
+        favorite = (ImageView)view.findViewById(R.id.favorite);
+        Aniamls user = users.get(i);
+        setFavoriteImagePhoto(favorite, user.isFavorite());
+        photo.setImageResource(user.getPhoto());
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,14 +76,14 @@ public class GrilViewAdapter extends BaseAdapter{
                boolean isfavorite = users.get(i).isFavorite();
                 isfavorite =!isfavorite;
                 users.get(i).setFavorite(isfavorite);
-                setImagePhoto(favorite, isfavorite);
+                setFavoriteImagePhoto(favorite, isfavorite);
                 Functions.setSharedPreferences((Activity) context, users.get(i).getName(), users.get(i).isFavorite());
             }
         });
 
         return view;
     }
-    void setImagePhoto(ImageView favorite, boolean isFavorite){
+    void setFavoriteImagePhoto(ImageView favorite, boolean isFavorite){
         if(isFavorite)
         {
             favorite.setImageResource(R.drawable.enable_favorite);

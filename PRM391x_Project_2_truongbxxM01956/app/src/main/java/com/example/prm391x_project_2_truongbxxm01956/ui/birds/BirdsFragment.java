@@ -69,9 +69,9 @@ public class BirdsFragment extends Fragment {
 
         users=new ArrayList<>();
         gallery=binding.gallery;
+        getDatas();
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
-        getDatas();
 /*        final TextView textView = binding.textSlideshow;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
