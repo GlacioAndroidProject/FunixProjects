@@ -63,7 +63,9 @@ public class ManimalsFragment extends Fragment {
                 new ViewModelProvider(this).get(HomeViewModel.class);*/
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+
+       // View root = binding.getRoot();
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         users=new ArrayList<>();
         gallery=binding.gallery;

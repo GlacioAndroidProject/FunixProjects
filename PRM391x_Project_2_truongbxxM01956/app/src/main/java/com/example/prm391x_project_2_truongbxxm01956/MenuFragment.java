@@ -1,5 +1,7 @@
 package com.example.prm391x_project_2_truongbxxm01956;
 
+import static com.example.prm391x_project_2_truongbxxm01956.MainActivity.CONTENT_VIEW_ID;
+
 import android.content.Context;
 
 import android.graphics.Bitmap;
@@ -17,10 +19,17 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.prm391x_project_2_truongbxxm01956.ui.Manimals.ManimalsFragment;
+import com.example.prm391x_project_2_truongbxxm01956.ui.birds.BirdsFragment;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.AnimalDetail;
+import com.example.prm391x_project_2_truongbxxm01956.ui.seas.SeasFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 public class MenuFragment extends Fragment {
@@ -46,7 +55,6 @@ public class MenuFragment extends Fragment {
         initView(v);
 
         return v;
-
     }
     @Override
 
@@ -55,17 +63,10 @@ public class MenuFragment extends Fragment {
         super.onAttach(context);
 
         mContext = context;
-
     }
     private void initView(View v) {
 
         mDrawer = v.findViewById(R.id.drawer);
-
-        //rvAnimal = v.findViewById(R.id.rv_animals);
-
-        //Xử lý mở menu trái
-        //v.findViewById(R.id.iv_menu).setOnClickListener(v12 -> mDrawer.openDrawer(GravityCompat.START));
-
         //Hiển thị ảnh động vật biển
 
         v.findViewById(R.id.iv_sea).setOnClickListener(v1 -> {
@@ -76,8 +77,6 @@ public class MenuFragment extends Fragment {
 
         });
 
-
-
         //Hiển thị ảnh động vật có vú
 
         v.findViewById(R.id.iv_mammal).setOnClickListener(v1 -> {
@@ -85,11 +84,7 @@ public class MenuFragment extends Fragment {
             v.startAnimation(AnimationUtils.loadAnimation(mContext, androidx.appcompat.R.anim.abc_fade_in));
 
             showAnimals("mammal");
-
         });
-
-
-
         //Hiển thị ảnh chim muông
 
         v.findViewById(R.id.iv_bird).setOnClickListener(v1 -> {
@@ -100,46 +95,38 @@ public class MenuFragment extends Fragment {
 
         });
 
-
-
-        //Hiển thị danh sách ảnh lên RecyclerView
-
-        if (listAnimals != null) {
-
-/*            GrilViewAdapter animalAdapter = new GrilViewAdapter(listAnimals, mContext, vv -> doCLickAnimal((AnimalDetail) vv.getTag()));
-
-            rvAnimal.setAdapter(animalAdapter);*/
-
-        }
-
     }
-
-
 
     private void showAnimals(String animalType) {
+        switch (animalType){
 
-        listAnimals = new ArrayList<>();
+            case "sea":
+            {
+                SeasFragment newFragment = new SeasFragment();
 
-        //Học sinh tự xử lý để xây dựng được danh sách Animal tương ứng dựa vào animalType
+                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
+/*                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setReorderingAllowed(true)
+                        .add(R.id.fragment_container_view_seas, SeasFragment.class, null)
+                        .commit();*/
+                ft.add(R.id.fragment_container_view_seas, newFragment).commit();
+                break;
+            }
+            case "mammal":
+            {
+                ManimalsFragment newFragment = new ManimalsFragment();
+                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
+                ft.add(R.id.iv_mammal, newFragment).commit();
+            }
+            case "bird":
+            {
+                BirdsFragment newFragment = new BirdsFragment();
+                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
+                ft.add(R.id.iv_bird, newFragment).commit();
+            }
 
-        //Hiển thị danh sách ảnh lên RecyclerView
-/*        GrilViewAdapter animalAdapter = new GrilViewAdapter(listAnimals, mContext, v -> doCLickAnimal((AnimalDetail) v.getTag()));
-
-        rvAnimal.setAdapter(animalAdapter);*/
-
+        }
         mDrawer.closeDrawers();
-
-    }
-
-
-
-    private void doCLickAnimal(AnimalDetail animal) {
-
-        //Chuyển sang màn hình chi tiết
-
-        MainActivity act = (MainActivity) mContext;
-
-        //act.showDetail(listAnimals, animal);
 
     }
 

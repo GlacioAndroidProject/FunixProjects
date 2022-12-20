@@ -65,7 +65,8 @@ public class BirdsFragment extends Fragment {
 */
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        //View root = binding.getRoot();
+        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
 
         users=new ArrayList<>();
         gallery=binding.gallery;

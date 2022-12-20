@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    android:id="@+id/ln_main"
+
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+</LinearLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,26 +35,17 @@
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_main"
+        android:layout_gravity="start">
+&lt;!&ndash;        app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        app:itemIconSize="128dp"
-    />
-</androidx.drawerlayout.widget.DrawerLayout>
-    <!--<?xml version="1.0" encoding="utf-8"?>
+        app:itemIconSize="128dp">&ndash;&gt;
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-        xmlns:tools="http://schemas.android.com/tools"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-
-        android:id="@+id/ln_main"
-
-        android:orientation="vertical"
-
-        tools:context=".MainActivity">
-
-    </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/item_menu" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>-->

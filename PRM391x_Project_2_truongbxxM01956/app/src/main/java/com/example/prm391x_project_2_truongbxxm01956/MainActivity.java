@@ -1,5 +1,6 @@
 package com.example.prm391x_project_2_truongbxxm01956;
 
+/*
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -48,14 +49,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -63,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
+*/
 
-/*
 import android.os.Bundle;
 
 
@@ -74,28 +67,33 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.prm391x_project_2_truongbxxm01956.ui.Animal;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.AnimalDetail;
+import com.example.prm391x_project_2_truongbxxm01956.ui.seas.SeasFragment;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    @Override
+    public static final int CONTENT_VIEW_ID = 10101010;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        initViews();
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(R.id.fragment_container_view_seas, SeasFragment.class, null)
+                    .commit();
+        }
+        //nitViews();
 
     }
     private void initViews() {
 
         MenuFragment menuFragment = new MenuFragment();
 
-        getSupportFragmentManager().beginTransaction()
-
-                .replace(R.id.ln_main, menuFragment, null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.ln_main, menuFragment, null).commit();
 
     }
     public void showDetail(List<AnimalDetail> listAnimals, AnimalDetail animal) {
@@ -104,4 +102,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-}*/
+}

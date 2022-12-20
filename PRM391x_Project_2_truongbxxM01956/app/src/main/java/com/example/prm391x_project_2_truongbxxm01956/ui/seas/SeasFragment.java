@@ -57,25 +57,25 @@ public class SeasFragment extends Fragment {
             R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
     };
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    public SeasFragment() {
+        super(R.layout.fragment_gallery);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+    }
+/*    public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-/*
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
-*/
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
 
         users=new ArrayList<>();
         gallery=binding.gallery;
         getDatas();
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
-/*        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);*/
         return root;
-    }
+    }*/
 
     // getting all the datas
     private void getDatas(){
