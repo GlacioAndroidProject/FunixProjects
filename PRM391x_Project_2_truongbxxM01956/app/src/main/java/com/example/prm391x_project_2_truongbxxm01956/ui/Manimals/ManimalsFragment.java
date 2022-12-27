@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.prm391x_project_2_truongbxxm01956.R;
-import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentHomeBinding;
+import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentManimalsBinding;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.GrilViewAdapter;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.models.Aniamls;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.utils.Functions;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class ManimalsFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentManimalsBinding binding;
 
     private ArrayList<Aniamls> users;
     private GridView gallery;
@@ -62,7 +62,7 @@ public class ManimalsFragment extends Fragment {
 /*        HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);*/
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentManimalsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         users=new ArrayList<>();

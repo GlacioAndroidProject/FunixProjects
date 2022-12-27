@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.prm391x_project_2_truongbxxm01956.R;
-import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentGalleryBinding;
+import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentSeasBinding;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.GrilViewAdapter;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.models.Aniamls;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.utils.Functions;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class SeasFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentSeasBinding binding;
     private ArrayList<Aniamls> users;
     private GridView gallery;
     private GrilViewAdapter grilViewAdapter;
@@ -64,7 +64,7 @@ public class SeasFragment extends Fragment {
                 new ViewModelProvider(this).get(GalleryViewModel.class);
 */
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentSeasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         users=new ArrayList<>();

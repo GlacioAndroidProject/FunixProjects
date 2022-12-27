@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.prm391x_project_2_truongbxxm01956.R;
-import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentSlideshowBinding;
+import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentBirdsBinding;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.GrilViewAdapter;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.models.Aniamls;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.utils.Functions;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class BirdsFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentBirdsBinding binding;
     private ArrayList<Aniamls> users;
     private GridView gallery;
     private GrilViewAdapter grilViewAdapter;
@@ -64,7 +64,7 @@ public class BirdsFragment extends Fragment {
                 new ViewModelProvider(this).get(SlideshowViewModel.class);
 */
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentBirdsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         users=new ArrayList<>();

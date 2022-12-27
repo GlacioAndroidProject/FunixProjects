@@ -9,17 +9,17 @@
         android:id="@+id/nav_seas"
         android:name="com.example.prm391x_project_2_truongbxxm01956.ui.Manimals.ManimalsFragment"
         android:label="@string/menu_seas"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_seas" />
 
     <fragment
         android:id="@+id/nav_manimals"
         android:name="com.example.prm391x_project_2_truongbxxm01956.ui.seas.SeasFragment"
         android:label="@string/menu_manimals"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_manimals" />
 
     <fragment
         android:id="@+id/nav_birds"
         android:name="com.example.prm391x_project_2_truongbxxm01956.ui.birds.BirdsFragment"
         android:label="@string/menu_birds"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_birds" />
 </navigation>
