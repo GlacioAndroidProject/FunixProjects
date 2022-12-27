@@ -22,6 +22,7 @@ import androidx.annotation.Nullable;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -99,30 +100,32 @@ public class MenuFragment extends Fragment {
 
     private void showAnimals(String animalType) {
         switch (animalType){
-
             case "sea":
             {
                 SeasFragment newFragment = new SeasFragment();
-
                 FragmentTransaction ft = getParentFragmentManager().beginTransaction();
-/*                getActivity().getSupportFragmentManager().beginTransaction()
-                        .setReorderingAllowed(true)
-                        .add(R.id.fragment_container_view_seas, SeasFragment.class, null)
-                        .commit();*/
                 ft.add(R.id.fragment_container_view_seas, newFragment).commit();
+
+/*                getActivity().getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_container_view_seas, SeasFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .commit();*/
+
                 break;
             }
             case "mammal":
             {
-                ManimalsFragment newFragment = new ManimalsFragment();
-                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
-                ft.add(R.id.iv_mammal, newFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_container_view_mammal, ManimalsFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .commit();
             }
             case "bird":
             {
-                BirdsFragment newFragment = new BirdsFragment();
-                FragmentTransaction ft = getParentFragmentManager().beginTransaction();
-                ft.add(R.id.iv_bird, newFragment).commit();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_container_view_bird, BirdsFragment.class, null)
+                        .setReorderingAllowed(true)
+                        .commit();
             }
 
         }

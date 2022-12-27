@@ -63,6 +63,7 @@ import android.os.Bundle;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 
 import com.example.prm391x_project_2_truongbxxm01956.ui.Animal;
@@ -80,21 +81,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .setReorderingAllowed(true)
-                    .add(R.id.fragment_container_view_seas, SeasFragment.class, null)
-                    .commit();
-        }
-        //nitViews();
-
+        initViews();
     }
     private void initViews() {
 
         MenuFragment menuFragment = new MenuFragment();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.ln_main, menuFragment, null).commit();
-
+        //getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_view_seas,menuFragment, null).commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container_view_seas, menuFragment, null)
+                .commit();
     }
     public void showDetail(List<AnimalDetail> listAnimals, AnimalDetail animal) {
 

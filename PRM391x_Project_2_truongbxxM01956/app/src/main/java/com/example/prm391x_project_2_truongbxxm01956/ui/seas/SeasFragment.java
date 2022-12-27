@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class SeasFragment extends Fragment {
 
     private FragmentGalleryBinding binding;
-    private ArrayList<Aniamls> users;
+    private ArrayList<Aniamls> users = new ArrayList();
     private GridView gallery;
     private GrilViewAdapter grilViewAdapter;
     private String[] names={
@@ -57,25 +57,31 @@ public class SeasFragment extends Fragment {
             R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
     };
 
-    public SeasFragment() {
-        super(R.layout.fragment_gallery);
-    }
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        users=new ArrayList<>();
+        gallery=binding.gallery;
+
+        grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
+        gallery.setAdapter(grilViewAdapter);
+        getDatas();
     }
-/*    public View onCreateView(@NonNull LayoutInflater inflater,
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-
         users=new ArrayList<>();
-        gallery=binding.gallery;
         getDatas();
-        grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
+        gallery=binding.gallery;
+
+        grilViewAdapter = new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
+
         return root;
-    }*/
+    }
+
 
     // getting all the datas
     private void getDatas(){
