@@ -12,17 +12,19 @@
         <item
             android:id="@+id/nav_seas"
             android:icon="@drawable/bg_sea"
-            android:title="@string/menu_seas" />
+            android:title=""
+            >
+        </item>
         <item
 
             android:id="@+id/nav_manimals"
             android:icon="@drawable/bg_mammal"
             android:iconTint="@color/white"
-            android:title="@string/menu_manimals" />
+            android:title="" />
         <item
             android:id="@+id/nav_birds"
             android:icon="@drawable/bg_bird"
-            android:title="@string/menu_birds"
+            android:title=""
             />
     </group>
 </menu>

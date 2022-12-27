@@ -85,7 +85,8 @@
 
         android:layout_gravity="start"
 
-        android:background="@color/white" >
+        android:background="@color/white"
+        >
 
         <include layout="@layout/item_menu"/>
 
