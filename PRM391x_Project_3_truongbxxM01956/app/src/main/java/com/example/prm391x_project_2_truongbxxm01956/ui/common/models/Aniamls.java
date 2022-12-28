@@ -7,7 +7,7 @@ import android.os.Parcelable;
 import androidx.annotation.NonNull;
 
 public class Aniamls implements Parcelable {
-    private String name, description;
+    private String name, description, phone = "";
     private int photo;
     private boolean isFavorite = false;
 
@@ -38,6 +38,14 @@ public class Aniamls implements Parcelable {
             return new Aniamls[size];
         }
     };
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getName() {
         return name;

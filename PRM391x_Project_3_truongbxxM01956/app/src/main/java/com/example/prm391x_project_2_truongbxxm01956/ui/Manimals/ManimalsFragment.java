@@ -85,7 +85,7 @@ public class ManimalsFragment extends Fragment {
     }
     private void updateDatas(){
         for(int count=0;count<users.size();count++){
-            boolean isFavorite = Functions.getsetSharedPreferences((this.getActivity()),users.get(count).getName());
+            boolean isFavorite = Functions.getSharedPreferencesByBooleanValue((this.getActivity()),users.get(count).getName());
             users.get(count).setFavorite(isFavorite);
         }
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());

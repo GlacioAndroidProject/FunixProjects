@@ -1,5 +1,7 @@
 package com.example.prm391x_project_2_truongbxxm01956;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -47,9 +49,17 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        checkPermission();
     }
 
-
+    void  checkPermission()
+    {
+        if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED
+                || checkSelfPermission(Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
+        {
+            requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_CALL_LOG,}, 101);
+        }
+    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

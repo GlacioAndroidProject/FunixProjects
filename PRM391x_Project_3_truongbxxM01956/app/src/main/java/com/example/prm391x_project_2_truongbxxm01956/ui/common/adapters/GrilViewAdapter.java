@@ -77,7 +77,7 @@ public class GrilViewAdapter extends BaseAdapter{
                 isfavorite =!isfavorite;
                 users.get(i).setFavorite(isfavorite);
                 setFavoriteImagePhoto(favorite, isfavorite);
-                Functions.setSharedPreferences((Activity) context, users.get(i).getName(), users.get(i).isFavorite());
+                Functions.setSharedPreferencesByBooleanValue((Activity) context, users.get(i).getName(), users.get(i).isFavorite());
             }
         });
 

@@ -23,15 +23,14 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:src="@drawable/ant"
-            android:layout_weight="5" />
+            android:layout_weight="7" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
             android:layout_weight="1.5"
-            android:layout_margin="5dp"
-            android:weightSum="13"
+            android:weightSum="17"
             android:layout_gravity="left|center"
             android:background="@color/colorDeatilTitle"
             >
@@ -39,20 +38,39 @@
                 android:id="@+id/txt_name"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="12"
-                android:textSize="30dp"
+                android:layout_weight="10"
+                android:textSize="25dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_gravity="left|center"
                 />
             <ImageView
-                android:layout_margin="5dp"
+                android:id="@+id/ic_phone"
+                android:src="@drawable/phone_call"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="right|center"
+                />
+            <Button
+                android:id="@+id/btn_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:textSize="14dp"
+                android:background="@android:color/transparent"
+                android:layout_gravity="left|center"
+                android:textColor="@android:color/widget_edittext_dark"
+                android:text="0359018836"
+                />
+
+            <ImageView
                 android:id="@+id/favorite"
                 android:src="@drawable/disable_favorite"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_gravity="right|center"
                 />
         </LinearLayout>
@@ -60,7 +78,7 @@
             android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="13"
+            android:layout_weight="11"
             android:layout_margin="5dp"
             android:textSize="15dp"
             />
