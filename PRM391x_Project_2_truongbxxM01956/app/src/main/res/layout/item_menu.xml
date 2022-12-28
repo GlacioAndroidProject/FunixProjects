@@ -21,7 +21,7 @@
             android:id="@+id/iv_sea"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/bg_sea" />
+            android:src="@drawable/ocean_animals_229548_1399" />
 
         <TextView
             android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:id="@+id/iv_mammal"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/bg_mammal" />
+            android:src="@drawable/mammals_c1" />
 
         <TextView
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             android:id="@+id/iv_bird"
             android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:src="@drawable/bg_bird" />
+            android:src="@drawable/animals_birds" />
 
         <TextView
             android:layout_width="match_parent"

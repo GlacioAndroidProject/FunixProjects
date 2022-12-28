@@ -25,44 +25,21 @@ public class BirdsFragment extends Fragment {
     private GrilViewAdapter grilViewAdapter;
     private String[] names={
             //"animal",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
+            "eagle","falcon","hawk","parrot",
+            "peacock","penguin","raven","sparrow","woodpecker",
     };
     private int[] description ={
             //"animal",
             R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
             R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
-            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
-            R.string.penguin,R.string.pig,R.string.staroffice,R.string.turtle,R.string.xfiles_monster,
-            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
-            R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
-            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
-            R.string.penguin,R.string.pig,R.string.staroffice, R.string.turtle,R.string.xfiles_monster
     };
     private int[] photos={//R.drawable.bg_animal,
-            R.drawable.ant,R.drawable.big_foot,R.drawable.bird,R.drawable.cat,R.drawable.dog,
-            R.drawable.dolphin,R.drawable.dragon_fly,R.drawable.elephant,R.drawable.fish,R.drawable.frog,
-            R.drawable.jelly_fish,R.drawable.kbugbuster,R.drawable.lion,R.drawable.nessy,R.drawable.penguin,
-            R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
-
-            R.drawable.ant,R.drawable.big_foot,R.drawable.bird,R.drawable.cat,R.drawable.dog,
-            R.drawable.dolphin,R.drawable.dragon_fly,R.drawable.elephant,R.drawable.fish,R.drawable.frog,
-            R.drawable.jelly_fish,R.drawable.kbugbuster,R.drawable.lion,R.drawable.nessy,R.drawable.penguin,
-            R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
+            R.drawable.ic_eagle,R.drawable.ic_falcon,R.drawable.ic_hawk,R.drawable.ic_parrot,R.drawable.ic_peacock,
+            R.drawable.ic_peguin,R.drawable.ic_raven,R.drawable.ic_sparrow,R.drawable.ic_woodpecker
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-/*
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
-*/
 
         binding = FragmentBirdsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -72,16 +49,8 @@ public class BirdsFragment extends Fragment {
         getDatas();
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
-/*        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });*/
         return root;
+
     }
     // getting all the datas
     private void getDatas(){
