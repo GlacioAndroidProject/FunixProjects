@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.prm391x_project_2_truongbxxm01956.R;
-import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentGalleryBinding;
+import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentSeasBinding;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.GrilViewAdapter;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.models.Aniamls;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.utils.Functions;
@@ -19,52 +19,28 @@ import java.util.ArrayList;
 
 public class SeasFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentSeasBinding binding;
     private ArrayList<Aniamls> users;
     private GridView gallery;
     private GrilViewAdapter grilViewAdapter;
     private String[] names={
             //"animal",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
-            "ant","big foot","bird","cat",
-            "dog","dolphin","dragon fly","elephant","fish",
-            "frog","jelly fish","kbugbuster","lion","nessy",
-            "penguin","pig","staroffice","turtle","xfiles monster",
+            "crab","dolphin","jellyfish","octopus", "red snapper",
+            "shark","squid","swordfish","whale", "dolphin",
     };
     private int[] description ={
-            //"animal",
-            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
-            R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
-            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
-            R.string.penguin,R.string.pig,R.string.staroffice,R.string.turtle,R.string.xfiles_monster,
-            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,
-            R.string.dog,R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,
-            R.string.frog,R.string.elly_fish,R.string.kbugbuster,R.string.lion,R.string.nessy,
-            R.string.penguin,R.string.pig,R.string.staroffice, R.string.turtle,R.string.xfiles_monster
+            R.string.ant,R.string.big_foot,R.string.bird,R.string.cat,R.string.dog,
+            R.string.dolphin,R.string.dragon_fly,R.string.elephant,R.string.fish,R.string.frog,
     };
-    private int[] photos={//R.drawable.bg_animal,
-            R.drawable.ant,R.drawable.big_foot,R.drawable.bird,R.drawable.cat,R.drawable.dog,
-            R.drawable.dolphin,R.drawable.dragon_fly,R.drawable.elephant,R.drawable.fish,R.drawable.frog,
-            R.drawable.jelly_fish,R.drawable.kbugbuster,R.drawable.lion,R.drawable.nessy,R.drawable.penguin,
-            R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
-
-            R.drawable.ant,R.drawable.big_foot,R.drawable.bird,R.drawable.cat,R.drawable.dog,
-            R.drawable.dolphin,R.drawable.dragon_fly,R.drawable.elephant,R.drawable.fish,R.drawable.frog,
-            R.drawable.jelly_fish,R.drawable.kbugbuster,R.drawable.lion,R.drawable.nessy,R.drawable.penguin,
-            R.drawable.pig,R.drawable.staroffice,R.drawable.turtle,R.drawable.xfiles_monster,
+    private int[] photos={
+            R.drawable.ic_crab,R.drawable.ic_dolphin,R.drawable.ic_jellyfish,R.drawable.ic_octopus,R.drawable.ic_red_snapper,
+            R.drawable.ic_shark,R.drawable.ic_squid,R.drawable.ic_swordfish,R.drawable.ic_whale,R.drawable.dolphin
     };
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-/*
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
-*/
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentSeasBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         users=new ArrayList<>();
@@ -72,8 +48,7 @@ public class SeasFragment extends Fragment {
         getDatas();
         grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
         gallery.setAdapter(grilViewAdapter);
-/*        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);*/
+
         return root;
     }
 
