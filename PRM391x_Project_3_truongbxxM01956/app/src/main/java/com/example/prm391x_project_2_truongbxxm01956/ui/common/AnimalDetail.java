@@ -87,14 +87,17 @@ public class AnimalDetail extends AppCompatActivity {
     void getPhoneFromMemory()
     {
         String key = aniamlsInfo.getName() + String.valueOf(aniamlsInfo.getPhoto());
-        String phone =  Functions.getSharedPreferencesByStringValue((Activity)context, key);
+        String phone =  Functions.getSharedPreferencesByStringValue(context, key);
         aniamlsInfo.setPhone(phone);
         btn_phone.setText(phone);
     }
     void setPhoneToMemory()
     {
-        String key = aniamlsInfo.getName() + String.valueOf(aniamlsInfo.getPhoto());
-        Functions.setSharedPreferencesByStringValue((Activity)context, key, aniamlsInfo.getPhone());
+        String keySavePhone = aniamlsInfo.getName() + String.valueOf(aniamlsInfo.getPhoto());
+        String keySaveImage = aniamlsInfo.getPhone();
+        Functions.setSharedPreferencesByStringValue(context, keySavePhone, aniamlsInfo.getPhone());
+        Functions.setSharedPreferencesByStringValue(context, keySaveImage, String.valueOf(aniamlsInfo.getPhoto()));
+
     }
     void showDialog(){
         String phone = btn_phone.getText().toString();

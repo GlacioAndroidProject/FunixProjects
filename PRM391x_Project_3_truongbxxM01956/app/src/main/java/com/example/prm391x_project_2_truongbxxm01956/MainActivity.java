@@ -1,8 +1,14 @@
 package com.example.prm391x_project_2_truongbxxm01956;
 
 import android.Manifest;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.Menu;
 
@@ -22,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
+    CallReceiver callReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        callReceiver = new CallReceiver();
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -52,14 +58,33 @@ public class MainActivity extends AppCompatActivity {
         checkPermission();
     }
 
-    void  checkPermission()
+    void checkPermission()
     {
         if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED
                 || checkSelfPermission(Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
         {
             requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_CALL_LOG,}, 101);
         }
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.intent.action.PHONE_STATE");
+        filter.addAction("android.intent.action.NEW_OUTGOING_CALL");
+        filter.setPriority(1000);
+        registerReceiver(callReceiver, filter);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //checkPermission();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(callReceiver);
+    }
+
+
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -67,45 +92,3 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 }
-
-/*
-import android.os.Bundle;
-
-
-
-import androidx.appcompat.app.AppCompatActivity;
-
-
-import com.example.prm391x_project_2_truongbxxm01956.ui.Animal;
-import com.example.prm391x_project_2_truongbxxm01956.ui.common.AnimalDetail;
-
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
-    @Override
-
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
-
-        initViews();
-
-    }
-    private void initViews() {
-
-        MenuFragment menuFragment = new MenuFragment();
-
-        getSupportFragmentManager().beginTransaction()
-
-                .replace(R.id.ln_main, menuFragment, null).commit();
-
-    }
-    public void showDetail(List<AnimalDetail> listAnimals, AnimalDetail animal) {
-
-        //Học sinh tự xây dựng màn hình DetailFragment dựa vào 2 dữ liệu đầu vào của phương thức
-
-    }
-
-}*/
