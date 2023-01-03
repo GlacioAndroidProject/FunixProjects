@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="url_string_array">
+        <!--Note that full url addresses are given to insure compatibility and proper loading-->
+        <item>http://www.google.com</item>
+        <item>http://www.facebook.com</item>
+        <item>http://www.youtube.com</item>
+        <item>http://www.yahoo.com</item>
+        <item>http://www.baidu.com</item>
+        <item>http://www.amazon.com</item>
+        <item>http://www.wikipedia.com</item>
+        <item>http://www.twitter.com</item>
+        <item>http://www.linkedin.com</item>
+        <item>http://www.ebay.com</item>
+        <item>http://www.bing.com</item>
+        <item>http://www.tumblr.com</item>
+        <item>http://www.reddit.com</item>
+        <item>http://www.pinterest.com</item>
+        <item>http://www.wordpress.com</item>
+
+    </string-array>
+</resources>
