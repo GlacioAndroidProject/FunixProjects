@@ -5,21 +5,12 @@ import static androidx.core.app.ActivityCompat.startActivityForResult;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
-import android.widget.Toast;
-
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.core.app.ActivityCompat;
 
 import com.example.prm391x_project_1_truongbxxm01956.AnimalDetail;
 import com.example.prm391x_project_1_truongbxxm01956.R;
@@ -29,18 +20,18 @@ import com.example.prm391x_project_1_truongbxxm01956.utils.Functions;
 import java.util.ArrayList;
 
 public class GrilViewAdapter extends BaseAdapter{
-    private ArrayList<Aniamls> users;
+    private ArrayList<Aniamls> aniamls;
     private Context context;
 
-    public GrilViewAdapter(ArrayList<Aniamls> users, Context context) {
-        this.users = users;
+    public GrilViewAdapter(ArrayList<Aniamls> aniamls, Context context) {
+        this.aniamls = aniamls;
         this.context = context;
         // GetContent creates an ActivityResultLauncher<String> to allow you to pass
     }
 
     @Override
     public int getCount() {
-        return users.size();
+        return aniamls.size();
     }
 
     @Override
@@ -63,13 +54,13 @@ public class GrilViewAdapter extends BaseAdapter{
         }
         photo=(ImageView)view.findViewById(R.id.photo);
         favorite =(ImageView)view.findViewById(R.id.favorite);
-        Aniamls user=users.get(i);
+        Aniamls user= aniamls.get(i);
         setImagePhoto(favorite, user.isFavorite());
-
+        photo.setImageResource(user.getPhoto());
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Aniamls user=users.get(i);
+                Aniamls user= aniamls.get(i);
                 v.startAnimation(AnimationUtils.loadAnimation(context, androidx.appcompat.R.anim.abc_grow_fade_in_from_bottom));
                 Intent myIntent = new Intent(context, AnimalDetail.class);
                 myIntent.putExtra("animalObjectDetail", user); //Optional parameters
@@ -82,11 +73,11 @@ public class GrilViewAdapter extends BaseAdapter{
         favorite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               boolean isfavorite = users.get(i).isFavorite();
+               boolean isfavorite = aniamls.get(i).isFavorite();
                 isfavorite =!isfavorite;
-                users.get(i).setFavorite(isfavorite);
+                aniamls.get(i).setFavorite(isfavorite);
                 setImagePhoto(favorite, isfavorite);
-                Functions.setSharedPreferences((Activity) context, users.get(i).getName(), users.get(i).isFavorite());
+                Functions.setSharedPreferences((Activity) context, aniamls.get(i).getName(), aniamls.get(i).isFavorite());
             }
         });
 
