@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="hint_link">Link</string>
+    <string name="txt_download">Download</string>
+    <string name="txt_open">Open</string>
+    <string name="txt_login">Login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="txt_forgot_pass">Forgot password?</string>
+    <string name="txt_no_account">Don\'t have an account ?</string>
+    <string name="txt_register">Register</string>
+</resources>
