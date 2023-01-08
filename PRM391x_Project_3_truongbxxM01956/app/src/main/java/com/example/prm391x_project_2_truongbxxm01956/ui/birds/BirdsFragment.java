@@ -4,14 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.prm391x_project_2_truongbxxm01956.R;
 import com.example.prm391x_project_2_truongbxxm01956.databinding.FragmentBirdsBinding;
-import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.GrilViewAdapter;
+import com.example.prm391x_project_2_truongbxxm01956.ui.common.adapters.RecyclerViewAdapter;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.models.Aniamls;
 import com.example.prm391x_project_2_truongbxxm01956.ui.common.utils.Functions;
 
@@ -20,9 +21,9 @@ import java.util.ArrayList;
 public class BirdsFragment extends Fragment {
 
     private FragmentBirdsBinding binding;
-    private ArrayList<Aniamls> users;
-    private GridView gallery;
-    private GrilViewAdapter grilViewAdapter;
+    private ArrayList<Aniamls> aniamls;
+    private RecyclerView gallery;
+    private RecyclerViewAdapter recyclerViewAdapter;
     private String[] names={
             //"animal",
             "eagle","falcon","hawk","parrot",
@@ -44,27 +45,28 @@ public class BirdsFragment extends Fragment {
         binding = FragmentBirdsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        users=new ArrayList<>();
+        aniamls =new ArrayList<>();
         gallery=binding.gallery;
+        gallery.setLayoutManager(new GridLayoutManager(this.getActivity(), 2));
         getDatas();
-        grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
-        gallery.setAdapter(grilViewAdapter);
+        recyclerViewAdapter =new RecyclerViewAdapter(aniamls,this.getActivity());
+        gallery.setAdapter(recyclerViewAdapter);
         return root;
 
     }
     // getting all the datas
     private void getDatas(){
         for(int count=0;count<names.length;count++){
-            users.add(new Aniamls(names[count], getString(description[count]),photos[count], false));
+            aniamls.add(new Aniamls(names[count], getString(description[count]),photos[count], false));
         }
     }
     private void updateDatas(){
-        for(int count=0;count<users.size();count++){
-            boolean isFavorite = Functions.getSharedPreferencesByBooleanValue((this.getActivity()),users.get(count).getName());
-            users.get(count).setFavorite(isFavorite);
+        for(int count = 0; count< aniamls.size(); count++){
+            boolean isFavorite = Functions.getSharedPreferencesByBooleanValue((this.getActivity()), aniamls.get(count).getName());
+            aniamls.get(count).setFavorite(isFavorite);
         }
-        grilViewAdapter =new GrilViewAdapter(users,this.getActivity());
-        gallery.setAdapter(grilViewAdapter);
+        recyclerViewAdapter =new RecyclerViewAdapter(aniamls,this.getActivity());
+        gallery.setAdapter(recyclerViewAdapter);
     }
 
     @Override
