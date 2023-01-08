@@ -80,7 +80,7 @@ public class CallReceiver extends BroadcastReceiver {
             ImageView view = new ImageView(mContext);
             view.setImageResource(drawableId);
             toast.setView(view);
-            toast.setDuration(Toast.LENGTH_LONG);
+            toast.setDuration(Toast.LENGTH_SHORT);
             toast.show();
 
         }

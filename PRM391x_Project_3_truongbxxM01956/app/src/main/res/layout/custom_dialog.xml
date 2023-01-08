@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="12">
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Cập nhật số điện thoại!"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/imgAvata"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_weight="6" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="Type phone"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="14dp"
+        android:layout_weight="2"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:clickable="true"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:clickable="true"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

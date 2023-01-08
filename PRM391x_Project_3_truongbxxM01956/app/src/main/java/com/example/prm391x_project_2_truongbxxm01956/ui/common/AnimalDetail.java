@@ -99,22 +99,25 @@ public class AnimalDetail extends AppCompatActivity {
         Functions.setSharedPreferencesByStringValue(context, keySaveImage, String.valueOf(aniamlsInfo.getPhoto()));
 
     }
+    void onSavePhone(String phone)
+    {
+        aniamlsInfo.setPhone(phone);
+        btn_phone.setText(phone);
+        setPhoneToMemory();
+    }
     void showDialog(){
-        String phone = btn_phone.getText().toString();
+/*        String phone = btn_phone.getText().toString();
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         final EditText edittext = new EditText(context);
         edittext.setText(phone);
-        alert.setMessage("Enter Phone");
-        alert.setTitle("Enter Phone");
+
 
         alert.setView(edittext);
 
         alert.setPositiveButton("Save", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 String phoneTemp = edittext.getText().toString();
-                aniamlsInfo.setPhone(phoneTemp);
-                btn_phone.setText(phoneTemp);
-                setPhoneToMemory();
+                onSavePhone(phoneTemp);
             }
         });
 
@@ -123,7 +126,10 @@ public class AnimalDetail extends AppCompatActivity {
             }
         });
 
-        alert.show();
+        alert.show();*/
+
+        ChangePhoneDialogClass cdd=new ChangePhoneDialogClass(this, aniamlsInfo );
+        cdd.show();
     }
     void CallPhone(){
 
